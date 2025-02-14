@@ -1,0 +1,215 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+    color: white;
+    background-image: url("assets/imagenes/Valentines_Day_Heart_Two_514182_1920x1080.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+}
+
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.buttons button {
+    background: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+.buttons button:hover {
+    background: #ffebee;
+    transform: scale(1.1);
+}
+/* Estilo general para la página de momentos */
+.momentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: url('assets/imagenes/luffy.jpg') no-repeat center center fixed;
+    background-size: cover;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Contenedor del video */
+.container-video {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+}
+
+/* Para centrar el video */
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Video estilizado */
+video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    outline: none;
+}
+
+/* Botón de volver */
+button {
+    background: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background: #ffebee;
+    transform: scale(1.1);
+}
+/* Fondo romántico */
+.momentos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(45deg, #ff758c, #ff7eb3);
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+/* Contenedor del video principal */
+.container-video {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 80%;
+    position: relative;
+}
+
+/* Video principal */
+.video-main video {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Contenedor de videos pequeños */
+.video-gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 800px;
+    position: relative;
+    margin-top: 30px;
+}
+
+/* Videos pequeños */
+.mini-video {
+    width: 180px;
+    text-align: center;
+    position: absolute;
+}
+
+.mini-video video {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.mini-video p {
+    font-size: 0.9em;
+    margin-top: 5px;
+    color: white;
+}
+
+/* Posicionamiento mejorado de los videos */
+#video1 {
+    top: -250px;
+    left: -220px;
+}
+
+#video2 {
+    top: -250px;
+    right: -220px;
+}
+
+#video3 {
+    bottom: 250px;
+    left: -20%;
+    transform: translateX(-50%);
+}
+
+/* Imagen decorativa */
+.decoracion img {
+    width: 180px;
+    position: absolute;
+    bottom: 400px;
+    right: -190px;
+    animation: latido 1.5s infinite alternate ease-in-out;
+}
+
+/* Animación de latido */
+@keyframes latido {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2);
+    }
+}
+
+/* Botón de volver */
+button {
+    background: #fff;
+    border: none;
+    padding: 15px 25px;
+    margin-top: 10px;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+}
+
+/* Efecto al pasar el mouse sobre el botón */
+button:hover {
+    background: #ffebee;
+    transform: scale(1.1);
+}

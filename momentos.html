@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestros Momentos ❤️</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300;400&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(135deg, #ffe6e6, #ffb3b3);
+            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            padding: 2rem;
+        }
+
+        .container-video {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        h1 {
+            font-family: 'Dancing Script', cursive;
+            color: #ff4d6d;
+            font-size: 2.8rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .video-main {
+            position: relative;
+            width: 100%;
+            margin-bottom: 2rem;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(255, 77, 109, 0.2);
+        }
+
+        .video-main video {
+            width: 100%;
+            border-radius: 15px;
+            display: block;
+        }
+
+        .video-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .mini-video {
+            background: white;
+            padding: 1rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .mini-video:hover {
+            transform: translateY(-5px);
+        }
+
+        .mini-video video {
+            width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .mini-video p {
+            font-family: 'Dancing Script', cursive;
+            color: #ff4d6d;
+            font-size: 1.5rem;
+            text-align: center;
+            margin-top: 1rem;
+            padding: 0.5rem;
+        }
+
+        .decoracion {
+            text-align: center;
+            margin: 2rem 0;
+        }
+
+        .decoracion img {
+            max-width: 300px;
+            border-radius: 50%;
+            border: 5px solid white;
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .decoracion img:hover {
+            transform: scale(1.05);
+        }
+
+        button {
+            background: linear-gradient(45deg, #ff4d6d, #ff758c);
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            color: white;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: block;
+            margin: 2rem auto;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 77, 109, 0.4);
+        }
+
+        .hearts {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .heart {
+            position: fixed;
+            font-size: 20px;
+            animation: floatHeart 6s linear infinite;
+        }
+
+        @keyframes floatHeart {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(-100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Efecto de brillo en los bordes */
+        .video-main::before,
+        .mini-video::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, #ff4d6d, #ff758c, #ff8fa3, #ff4d6d);
+            z-index: -1;
+            border-radius: 17px;
+            animation: borderGlow 3s linear infinite;
+            opacity: 0.5;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); }
+            100% { filter: hue-rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="hearts" id="hearts"></div>
+    <div class="container-video">
+        <h1>Un hermoso recuerdo juntos 💖</h1>
+
+        <div class="video-main">
+            <video controls autoplay muted>
+                <source src="assets/videos/Collage amor.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+
+        <div class="video-gallery">
+            <div class="mini-video" id="video1">
+                <video controls>
+                    <source src="assets/videos/Video de WhatsApp 2025-02-13 a las 15.53.19_6f9ce126.mp4" type="video/mp4">
+                </video>
+                <p>🌹 Nuestro primer viaje juntos</p>
+            </div>
+
+            <div class="mini-video" id="video2">
+                <video controls>
+                    <source src="assets/videos/Video de WhatsApp 2025-02-13 a las 15.53.22_5ca43c18.mp4" type="video/mp4">
+                </video>
+                <p>💖 Una tarde especial</p>
+            </div>
+
+            <div class="mini-video" id="video3">
+                <video controls>
+                    <source src="assets/videos/Video de WhatsApp 2025-02-13 a las 15.53.23_c100102d.mp4" type="video/mp4">
+                </video>
+                <p>✨ Momento mágico</p>
+            </div>
+        </div>
+
+        <div class="decoracion">
+            <img src="assets/imagenes/Imagen de WhatsApp 2025-02-13 a las 15.53.20_f1fd4183.jpg" alt="Corazón">
+        </div>
+
+        <button onclick="window.location.href='index.html'">🔙 Volver a Inicio</button>
+    </div>
+
+    <script>
+        // Crear corazones flotantes
+        function createHearts() {
+            const heartsContainer = document.createElement('div');
+            heartsContainer.className = 'hearts';
+            document.body.appendChild(heartsContainer);
+            
+            const heartSymbols = ['❤️', '💖', '💝', '💕'];
+            
+            setInterval(() => {
+                const heart = document.createElement('span');
+                heart.className = 'heart';
+                heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                heartsContainer.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }, 300);
+        }
+
+        window.onload = createHearts;
+    </script>
+</body>
+</html>

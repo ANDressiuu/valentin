@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Un Mensaje para Ti 💖</title>
+    <style>
+        /* Fondo animado con destellos */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff758c, #ff7eb3, #fad0c4);
+            text-align: center;
+            font-family: 'Arial', sans-serif;
+            padding: 20px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        /* Efecto de destellos */
+        body::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/stardust.png');
+            opacity: 0.3;
+        }
+
+        /* Caja del mensaje */
+        .mensaje-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 20px;
+            box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            animation: fadeIn 1.5s ease-in-out;
+            position: relative;
+            z-index: 10;
+        }
+
+        /* Animación de entrada */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Título */
+        h2 {
+            color: #ff4081;
+            font-size: 26px;
+            font-family: 'Brush Script MT', cursive;
+            text-shadow: 2px 2px 10px rgba(255, 64, 129, 0.5);
+        }
+
+        /* Texto del mensaje */
+        p {
+            color: #333;
+            font-size: 17px;
+            line-height: 1.8;
+            font-weight: 500;
+        }
+
+        /* Botón de regreso */
+        .btn {
+            background-color: #ff4081;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 4px 10px rgba(255, 64, 129, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #e91e63;
+            transform: scale(1.05);
+        }
+
+        /* Corazones flotantes */
+        .heart {
+            position: fixed;
+            font-size: 24px;
+            top: 100vh;
+            animation: floatUp 6s linear infinite;
+        }
+
+        @keyframes floatUp {
+            from {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            to {
+                transform: translateY(-100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="mensaje-container">
+        <h2>Feliz San Valentín, mi amor ❤</h2>
+        <p>
+            Estos 2 meses y 14 días contigo han sido los más bonitos que he vivido.  
+            Cada momento a tu lado, cada mensaje que nos hemos enviado significan mucho para mí. 💖  
+            <br><br>
+            Me encanta compartir tiempo contigo, y no hay día en el que no agradezca tenerte en mi vida.  
+            También no hay día en el que no te extrañe, y en el que quisiera estar contigo.  
+            <br><br>
+            Te quiero muchísimo, más de lo que las palabras pueden decir.  
+            Gracias por hacerme tan feliz. Esto apenas comienza, y sé que nos esperan muchos más momentos hermosos juntosss.  
+            <br><br>
+            ✨💕 ailoviuu 💕✨
+        </p>
+
+        <br>
+        <button onclick="window.location.href = 'index.html';" class="btn">
+            ⬅️ Regresar
+        </button>
+    </div>
+
+    <script>
+        // Crear corazones flotantes
+        function createHearts() {
+            const heartSymbols = ['❤️', '💖', '💝', '💕'];
+
+            setInterval(() => {
+                const heart = document.createElement('span');
+                heart.className = 'heart';
+                heart.innerHTML = heartSymbols[Math.floor(Math.random() * heartSymbols.length)];
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+                heart.style.fontSize = Math.random() * 20 + 30 + 'px';
+                heart.style.color = `hsl(${Math.random() * 360}, 100%, 75%)`;
+                document.body.appendChild(heart);
+
+                setTimeout(() => {
+                    heart.remove();
+                }, 6000);
+            }, 250);
+        }
+
+        window.onload = createHearts;
+    </script>
+
+</body>
+</html>
