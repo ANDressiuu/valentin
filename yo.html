@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Mensaje de Amor Brillante</title>
+    <style>
+        /* ... (estilos anteriores se mantienen igual) ... */
+
+        .back-button {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            padding: 12px 25px;
+            background: linear-gradient(45deg, #ff0066, #ff85a2);
+            border: none;
+            border-radius: 25px;
+            color: white;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px rgba(255, 90, 95, 0.3);
+            text-decoration: none;
+            display: inline-block;
+            animation: pulseButton 2s infinite;
+        }
+
+        .back-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 20px rgba(255, 90, 95, 0.5);
+            background: linear-gradient(45deg, #ff85a2, #ff0066);
+        }
+
+        @keyframes pulseButton {
+            0% {
+                box-shadow: 0 0 15px rgba(255, 90, 95, 0.3);
+            }
+            50% {
+                box-shadow: 0 0 25px rgba(255, 90, 95, 0.5);
+            }
+            100% {
+                box-shadow: 0 0 15px rgba(255, 90, 95, 0.3);
+            }
+        }
+
+        /* Mantener todos los estilos anteriores aquí */
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(45deg, #ff78ab, #da85ff, #85d6ff);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+
+        .sparkle {
+            position: absolute;
+            width: 3px;
+            height: 3px;
+            border-radius: 50%;
+            background-color: white;
+            animation: twinkle 1.5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes twinkle {
+            0%, 100% { opacity: 0; transform: scale(0.5); }
+            50% { opacity: 1; transform: scale(1.2); }
+        }
+
+        .container {
+            max-width: 800px;
+            padding: 40px;
+            background: rgba(255, 255, 255, 0.92);
+            border-radius: 20px;
+            box-shadow: 
+                0 10px 30px rgba(0, 0, 0, 0.1),
+                0 0 20px rgba(255, 182, 193, 0.5),
+                0 0 40px rgba(255, 182, 193, 0.3);
+            position: relative;
+            overflow: hidden;
+            animation: fadeIn 2s ease;
+            backdrop-filter: blur(5px);
+            margin: 20px;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #ff5a5f, #ff85a2);
+            transform: rotate(45deg);
+            animation: float 3s infinite ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 90, 95, 0.5);
+        }
+
+        .heart::before,
+        .heart::after {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(45deg, #ff5a5f, #ff85a2);
+            border-radius: 50%;
+            position: absolute;
+            box-shadow: 0 0 15px rgba(255, 90, 95, 0.5);
+        }
+
+        .heart::before { left: -10px; }
+        .heart::after { top: -10px; }
+
+        .heart:nth-child(1) { top: 20px; right: 20px; }
+        .heart:nth-child(2) { top: 60px; left: 20px; animation-delay: 0.5s; }
+        .heart:nth-child(3) { bottom: 20px; right: 40px; animation-delay: 1s; }
+        .heart:nth-child(4) { bottom: 60px; left: 40px; animation-delay: 1.5s; }
+        .heart:nth-child(5) { top: 40px; right: 60px; animation-delay: 2s; }
+
+        h1 {
+            background: linear-gradient(45deg, #ff0066, #ff4593, #ff85a2);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px rgba(255, 90, 95, 0.2);
+            animation: titleGlow 2s ease-in-out infinite;
+        }
+
+        p {
+            color: #4a4a4a;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            font-size: 1.2em;
+            text-align: justify;
+            animation: slideUp 1s ease;
+            padding: 10px;
+            border-left: 3px solid transparent;
+            border-image: linear-gradient(to bottom, #ff0066, #ff85a2) 1;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        @keyframes float {
+            0%, 100% { transform: rotate(45deg) translate(0, 0); }
+            50% { transform: rotate(45deg) translate(0, -20px); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        @keyframes titleGlow {
+            0%, 100% { filter: drop-shadow(0 0 5px rgba(255, 90, 95, 0.5)); }
+            50% { filter: drop-shadow(0 0 15px rgba(255, 90, 95, 0.8)); }
+        }
+
+        .border-glow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: 20px;
+            pointer-events: none;
+            animation: borderGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes borderGlow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 182, 193, 0.5); }
+            50% { box-shadow: 0 0 40px rgba(255, 182, 193, 0.8); }
+        }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-button">← Volver al Inicio</a>
+    <script>
+        // Crear estrellas brillantes
+        for(let i = 0; i < 50; i++) {
+            const sparkle = document.createElement('div');
+            sparkle.className = 'sparkle';
+            sparkle.style.left = Math.random() * 100 + 'vw';
+            sparkle.style.top = Math.random() * 100 + 'vh';
+            sparkle.style.animationDelay = Math.random() * 2 + 's';
+            document.body.appendChild(sparkle);
+        }
+    </script>
+    <div class="container">
+        <div class="border-glow"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <div class="heart"></div>
+        <h1>cuando me enamore ✨</h1>
+        <p>
+            Desde que te comence a conocer, hubo algo en ti que me atrapó. Me pareciste una persona increíblemente inteligente, con una creatividad que me sorprendía cada día y un sentido del humor que hacía que cada conversación fuera especial. Poco a poco, sin darme cuenta, empezaste a gustarme.
+        </p>
+        <p>
+            Tu forma de ver el mundo, la manera en que hablas con tanta pasión sobre lo que te gusta, la dulzura con la que te expresas… Todo en ti me fue conquistando. Y claro, no puedo dejar de mencionar tu cabello, que siempre luce hermoso, y esos ojitos que brillan como si guardaran mil estrellas dentro.
+        </p>
+        <p>
+            Me enamoré de ti por lo que eres, por cómo me haces sentir, por los momentos que compartimos y por cada pequeño detalle que te hace única.
+        </p>
+    </div>
+</body>
+</html>
